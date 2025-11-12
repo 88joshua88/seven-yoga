@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>7yoga</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+
+  <style>
+    /* General Styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #fafafa;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+    section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+    .section-title { font-size: 2rem; margin-bottom: 20px; color: #1c3d7c; }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      margin: 8px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s;
+      width: 250px; /* fixed equal width */
+      text-align: center;
+    }
+    .btn-primary { background: #1c3d7c; color: white; }
+    .btn-primary:hover { background: #467fcf; }
+    .btn-secondary { background: white; color: #1c3d7c; border: 2px solid #1c3d7c; }
+    .btn-secondary:hover { background: #1c3d7c; color: white; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav>
+  <div class="container">
+    <img src="images/logoT.png" width="100px" height="60px" alt="Logo">
+    <ul>
+      <li><a href="#hero">Background</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#articles">Blog</a></li>
+      <li>
+        <a href="/signup-student" class="btn btn-primary login-btn">Log In</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%;
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+  }
+
+  nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav img {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    align-items: center; /* ensure vertical alignment of li items */
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: flex;
+  }
+
+  nav ul li a {
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+    display: inline-flex;     /* make link a flex container */
+    align-items: center;      /* vertically center text */
+    height: 50px;             /* match login button height */
+    padding: 0 10px;          /* horizontal spacing */
+  }
+
+  nav ul li a:hover {
+    color: #1c3d7c;
+  }
+
+  /* Login button styling */
+  .login-btn {
+    background: #1c3d7c;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    height: 35px;
+    width: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+
+  .login-btn:hover {
+    background: #467fcf;
+    color: #fff;
+  }
+</style>
+
+  <!-- Hero -->
+  <div id="hero">
+    <div class="hero-content">
+      <h1>The Online Yoga School</h1>
+      <p>Explore yoga beyond the physical. Discover balance, awareness, and the seven chakras.</p>
+      <a href="/signup-student" class="btn btn-primary">Become a Student</a>
+      <a href="/signup-teacher" class="btn btn-secondary">Become a Teacher</a>
+    </div>
+  </div>
+  <style>
+    #hero {
+      margin-top: 0px;
+      height: 100vh;
+      width: 100%;
+      background: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; position: relative; color: white;
+    }
+    #hero::after {
+      content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative; z-index: 1; max-width: 800px; padding: 20px;
+    }
+    #hero h1 { font-size: 3.5rem; margin-bottom: 20px; color: #fff; }
+    #hero p { font-size: 1.2rem; margin-bottom: 30px; }
+  </style>
+
+  <!-- Founder -->
+  <div id="founder">
+    <div style="padding: 80px 70px" class="founder">
+      <div class="founder-text">
+        <h2>Meet the Founder</h2>
+        <p>Hello, I’m Bhargav. Yoga has been my life’s journey — not just a practice, but a path of growth and self-discovery. Seven Yoga was born from a vision: to bring people into deeper harmony with themselves, others, and the world. Here we integrate body, mind, and spirit, introducing the wisdom of the seven chakras as a gentle guide.</p>
+        <a href="/founder" class="btn btn-primary">Read More</a>
+      </div>
+      <img src="images/298194785_1230722521023673_2850565036795763083_n.jpeg" alt="Founder">
+    </div>
+  </div>
+  <style>
+    .founder { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; background-color: white; }
+    .founder img {
+      border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      width: 350px;
+    }
+    .founder-text { flex: 1; font-size: 1.1rem; order: 1; }
+    .founder img { order: 2; }
+    @media (max-width: 768px) {
+      .founder-text { order: 1; width: 100%; }
+      .founder img { order: 2; width: 100%; }
+    }
+    .founder-text h2 { margin-bottom: 15px; color: #1c3d7c; }
+    .founder-text .btn { margin-top: 20px; }
+  </style>
+
+  <!-- How It Works -->
+<section id="how-it-works">
+  <h2>How It Works</h2>
+  <p>Seven Yoga is an online yoga school where you can learn from trusted teachers, anywhere in the world. The process is simple:</p>
+  <div class="steps">
+    <div class="step">
+      <img src="https://img.icons8.com/ios-filled/100/1c3d7c/search--v1.png" alt="Browse Icon">
+      <h3>1. Choose a Teacher</h3>
+      <p>Browse teacher profiles, specialties, and reviews to select the right fit for your practice.</p>
+    </div>
+    <div class="step">
+      <img src="https://img.icons8.com/ios-filled/100/1c3d7c/calendar--v1.png" alt="Calendar Icon">
+      <h3>2. Pick a Time</h3>
+      <p>Choose a time slot that works for you from the teacher’s availability, all conveniently online.</p>
+    </div>
+    <div class="step">
+      <img src="https://img.icons8.com/ios-filled/100/1c3d7c/money-bag.png" alt="Payment Icon">
+      <h3>3. Pay Securely</h3>
+      <p>Make a secure payment through Stripe. After payment, you’ll automatically receive a Zoom link for your session.</p>
+    </div>
+    <div class="step">
+      <img src="https://img.icons8.com/ios-filled/100/1c3d7c/lotus.png" alt="Yoga Icon">
+      <h3>4. Join Your Session</h3>
+      <p>Connect via Zoom with your chosen teacher and begin your yoga journey from anywhere in the world.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  #how-it-works {
+    background: #eef5fb;
+    text-align: center;
+    padding: 60px 20px; /* added top and bottom spacing */
+    border-radius: 20px; /* rounded edges */
+    margin: 40px auto;
+    max-width: 1200px;
+  }
+  #how-it-works h2 {
+    color: #1c3d7c;
+    margin-bottom: 20px;
+  }
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .step {
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .step:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  .step img {
+    width: 50px;
+    margin: 0 auto 15px auto; /* center the icon */
+    display: block;
+  }
+  .step h3 {
+    color: #1c3d7c;
+    margin-bottom: 10px;
+  }
+  .step p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+</style>
+
+  <!-- Philosophy -->
+  <section id="philosophy" class="philosophy-banner">
+    <h2>More Than the Physical</h2>
+    <p>Yoga is often seen as movement, flexibility, or fitness. At Seven Yoga, we honor the roots: it is breath, energy, awareness, balance, healing, inner wisdom. Our approach is gentle, modern, and holistic — inviting you to experience yoga as a way of living, not just a practice on the mat.</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png" alt="Icon">
+  </section>
+  <style>
+    .philosophy-banner {
+      background: #12216b; color: white; text-align: center;
+      padding: 80px 20px;
+      max-width: 100%; margin: 0;
+    }
+    .philosophy-banner h2 { font-size: 2.2rem; margin-bottom: 20px; }
+    .philosophy-banner p { max-width: 800px; margin: 0 auto 30px; font-size: 1.15rem; }
+    .philosophy-banner img {
+      width: 60px; margin: 0 auto;
+      filter: invert(1);
+    }
+  </style>
+
+  <!-- Chakras -->
+  <section id="chakras">
+    <div class="chakras">
+      <div class="chakra-text">
+        <h2>The Seven Chakras</h2>
+        <p>
+          In yoga, chakras are described as centres of energy running through the body. They can be seen as a way of understanding how our physical, emotional, and mental states are linked.
+        </p><br>
+  
+        <p>
+          Each centre reflects qualities we all recognise — from feeling grounded to expressing ourselves clearly. Through yoga and breath, these areas are gently brought into balance.
+        </p><br>
+  
+        <p>
+          At Seven Yoga, we use the chakra system as a simple guide. It offers insight into how body and mind connect, making practice more meaningful in daily life.
+        </p><br>
+  
+        <a href="https://sevenyogaworld.bubbleapps.io/version-test/article/an-introduction-to-the-seven-chakras" class="btn btn-primary" style="width:200px; display:inline-block; text-align:center;">Learn More</a>
+      </div>
+      <img src="images/chakras.jpg" alt="Chakra body diagram">
+    </div>
+  </section>
+  
+  <style>
+    .chakras { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; }
+    .chakras img {
+      flex: 1; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      min-width: 300px;
+      order: 2;
+    }
+    .chakra-text { flex: 1; min-width: 300px; order: 1; }
+    .chakra-text h2 { margin-bottom: 20px; color: #1c3d7c; }
+    .chakra-text p { font-size: 1.1rem; line-height: 1.8; }
+    @media (max-width: 768px) {
+      .chakras img { order: 2; width: 100%; }
+      .chakra-text { order: 1; width: 100%; }
+    }
+  </style>
+
+ <!-- Articles -->
+<section id="articles" class="articles-section">
+  <h2>From the Journey</h2>
+  <div class="articles">
+    <div class="article-card">
+      <img src="images/everyday-benefits-of-yoga.webp" alt="Article 1">
+      <div class="article-info">
+        <h3>Everyday benefits of yoga</h3>
+        <p>How simple, consistent yoga practice can improve energy, focus, posture, and peace of mind in daily life.</p>
+        <h5><a href="https://sevenyogaworld.bubbleapps.io/version-test/article/the-everyday-benefits-of-yoga" text-decoration="underline">Read more</a></h5>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="images/introduction-to-the-seven-chakras.jpg" alt="Article 2">
+      <div class="article-info">
+        <h3>An introduction to the seven chakras</h3>
+        <p>A clear guide to the body’s energy centres and how understanding them can bring balance and awareness.</p>
+        <h5><a href="https://sevenyogaworld.bubbleapps.io/version-test/article/an-introduction-to-the-seven-chakras" text-decoration="underline">Read more</a></h5>
+      </div>
+    </div>
+    <div class="article-card">
+      <img src="images/inner-well-being.jpg" alt="Article 3">
+      <div class="article-info">
+        <h3>Yoga beyond the physical</h3>
+        <p>Exploring yoga as more than movement — a path of breath, presence, and connection to inner wellbeing.</p>
+        <h5><a href="https://sevenyogaworld.bubbleapps.io/version-test/article/inner-well-being" text-decoration="underline">Read more</a></h5>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .articles-section {
+    background: #f4f4f4;
+    padding: 80px 20px;
+    max-width: 100%;
+  }
+  .articles-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: #000;
+  }
+  .articles {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap: 30px;
+  }
+  .article-card {
+    background: white; 
+    border-radius: 12px; 
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .article-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .article-card img {
+    width: 100%; 
+    height: 250px; 
+    object-fit: cover;
+  }
+  .article-info { padding: 20px; }
+  .article-info h3 { margin-bottom: 10px; color: black; }
+  .article-info p { font-size: 0.95rem; color: #555; margin-bottom: 5px; }
+  .article-info a { color: #1c3d7c; text-decoration: underline; }
+  .article-info a:hover { text-decoration: underline; }
+</style>
+
+
+  
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Seven Yoga. All rights reserved.</p>
+    <p><a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Use</a></p>
+  </footer>
+  <style>
+    footer {
+      text-align: center; padding: 40px 20px;
+      background: rgba(255,255,255,0.9); color: black; margin-top: 0px;
+    }
+    footer a { color: black; margin: 0 10px; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+
+</body>
+</html>
+
